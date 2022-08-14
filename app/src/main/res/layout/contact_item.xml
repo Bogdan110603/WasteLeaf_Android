@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingTop="10dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/contactBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle_153" />
+
+    <ImageView
+        android:id="@+id/contactImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView35"
+        app:layout_constraintEnd_toEndOf="@+id/imageView35"
+        app:layout_constraintStart_toStartOf="@+id/imageView35"
+        app:layout_constraintTop_toTopOf="@+id/imageView35" />
+
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView35"
+        app:layout_constraintTop_toTopOf="@+id/contactBackground"
+        tools:text="Georgel" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/contactBackground"
+        app:layout_constraintStart_toStartOf="@+id/contactBackground"
+        app:layout_constraintTop_toTopOf="@+id/contactBackground"
+        app:srcCompat="@drawable/exclusion_1" />
+
+    <TextView
+        android:id="@+id/lastMessageText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView35"
+        app:layout_constraintTop_toBottomOf="@+id/contactName"
+        tools:text="last message" />
+
+    <TextView
+        android:id="@+id/timestampLastMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/contactBackground"
+        app:layout_constraintTop_toTopOf="@+id/contactBackground"
+        tools:text="20:16" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

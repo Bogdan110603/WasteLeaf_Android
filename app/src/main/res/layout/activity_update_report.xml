@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.maps.report.UpdateReportActivity">
+
+    <ImageView
+        android:id="@+id/wasteImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/updateReportLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/updateReportBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_119__2_" />
+
+        <ImageView
+            android:id="@+id/closeUpdateReportLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:rotationX="180"
+            app:layout_constraintEnd_toEndOf="@+id/updateReportBackground"
+            app:layout_constraintStart_toStartOf="@+id/updateReportBackground"
+            app:layout_constraintTop_toTopOf="@+id/updateReportBackground"
+            app:srcCompat="@drawable/group_7" />
+
+        <ImageView
+            android:id="@+id/updateRouteBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/updateReportBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/updateReportBackground"
+            app:layout_constraintTop_toBottomOf="@+id/timeAgoBackground"
+            app:srcCompat="@drawable/rectangle_126" />
+
+        <ImageView
+            android:id="@+id/timeAgoBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/updateRouteBackground"
+            app:layout_constraintEnd_toEndOf="@+id/updateReportBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/updateReportBackground"
+            app:layout_constraintTop_toBottomOf="@+id/updateReporterBackground"
+            app:srcCompat="@drawable/rectangle_121" />
+
+        <ImageView
+            android:id="@+id/updateReporterBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/timeAgoBackground"
+            app:layout_constraintEnd_toEndOf="@id/updateReportBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/updateReportBackground"
+            app:layout_constraintTop_toBottomOf="@+id/updateBackground"
+            app:srcCompat="@drawable/rectangle_121" />
+
+        <ImageView
+            android:id="@+id/updateBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/updateReporterBackground"
+            app:layout_constraintEnd_toEndOf="@+id/updateReportBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/updateReportBackground"
+            app:layout_constraintTop_toBottomOf="@+id/updateCategoryImage"
+            app:srcCompat="@drawable/rectangle_125" />
+
+        <ImageView
+            android:id="@+id/stillThereBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/closeUpdateReportLayout"
+            app:srcCompat="@drawable/ellipse_35" />
+
+        <ImageView
+            android:id="@+id/allCleanBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/closeUpdateReportLayout"
+            app:srcCompat="@drawable/ellipse_37" />
+
+        <ImageView
+            android:id="@+id/updateCategoryImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rectangle_120"
+            app:layout_constraintBottom_toBottomOf="@+id/allCleanBackground"
+            app:layout_constraintEnd_toStartOf="@+id/allCleanBackground"
+            app:layout_constraintStart_toEndOf="@+id/stillThereBackground"
+            app:layout_constraintTop_toTopOf="@+id/allCleanBackground" />
+
+        <ImageView
+            android:id="@+id/routeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/updateRouteBackground"
+            app:layout_constraintEnd_toEndOf="@+id/updateRouteBackground"
+            app:layout_constraintStart_toStartOf="@+id/updateRouteBackground"
+            app:layout_constraintTop_toTopOf="@+id/updateRouteBackground"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/updateTimeAgoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/timeAgoBackground"
+            app:layout_constraintEnd_toEndOf="@+id/timeAgoBackground"
+            app:layout_constraintStart_toStartOf="@+id/timeAgoBackground"
+            app:layout_constraintTop_toTopOf="@+id/timeAgoBackground"
+            tools:text="5 days ago" />
+
+        <TextView
+            android:id="@+id/updateReporterNicknameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/updateReporterBackground"
+            app:layout_constraintEnd_toEndOf="@+id/updateReporterBackground"
+            app:layout_constraintStart_toStartOf="@+id/updateReporterBackground"
+            app:layout_constraintTop_toTopOf="@+id/updateReporterBackground"
+            tools:text="gigel69" />
+
+        <ImageView
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/update"
+            app:layout_constraintBottom_toBottomOf="@+id/updateBackground"
+            app:layout_constraintEnd_toEndOf="@+id/updateBackground"
+            app:layout_constraintStart_toStartOf="@+id/updateBackground"
+            app:layout_constraintTop_toTopOf="@+id/updateBackground" />
+
+        <ImageView
+            android:id="@+id/stillThereButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/stillThereBackground"
+            app:layout_constraintEnd_toEndOf="@+id/stillThereBackground"
+            app:layout_constraintStart_toStartOf="@+id/stillThereBackground"
+            app:layout_constraintTop_toTopOf="@+id/stillThereBackground"
+            app:srcCompat="@drawable/still_there" />
+
+        <ImageView
+            android:id="@+id/allCleanButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/allCleanBackground"
+            app:layout_constraintEnd_toEndOf="@+id/allCleanBackground"
+            app:layout_constraintStart_toStartOf="@+id/allCleanBackground"
+            app:layout_constraintTop_toTopOf="@+id/allCleanBackground"
+            app:srcCompat="@drawable/all_clean" />
+
+        <ImageView
+            android:id="@+id/updateReporterProfilePicture"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/updateReporterNicknameText"
+            app:layout_constraintEnd_toStartOf="@+id/updateReporterNicknameText"
+            app:layout_constraintTop_toTopOf="@+id/updateReporterNicknameText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/smallUpdateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/smallUpdateReportBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rectangle_119"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/openReportLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_7"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/smallUpdateReportBackground"
+            app:layout_constraintEnd_toEndOf="@+id/smallUpdateReportBackground"
+            app:layout_constraintStart_toStartOf="@+id/smallUpdateReportBackground"
+            app:layout_constraintTop_toTopOf="@+id/smallUpdateReportBackground"
+            app:srcCompat="@drawable/group_7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wasteleaf__31" />
+
+        <ImageView
+            android:id="@+id/loadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:srcCompat="@drawable/subtraction_6" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_wasteleaf_1" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/loading___" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

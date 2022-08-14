@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/userNameBackgroundImage"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user_name_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameBackgroundImage"
+        app:layout_constraintStart_toEndOf="@+id/userPictureBackgroundImage"
+        app:layout_constraintTop_toTopOf="@+id/userNameBackgroundImage"
+        tools:text="bogdan110603" />
+
+    <ImageView
+        android:id="@+id/userPictureImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userPictureBackgroundImage"
+        app:layout_constraintEnd_toEndOf="@+id/userPictureBackgroundImage"
+        app:layout_constraintStart_toStartOf="@+id/userPictureBackgroundImage"
+        app:layout_constraintTop_toTopOf="@+id/userPictureBackgroundImage" />
+
+    <ImageView
+        android:id="@+id/userPictureBackgroundImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/userNameBackgroundImage"
+        app:layout_constraintTop_toTopOf="@+id/userNameBackgroundImage"
+        app:srcCompat="@drawable/path_71" />
+
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postText"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/postText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/userPictureBackgroundImage"
+        app:layout_constraintTop_toBottomOf="@+id/userPictureBackgroundImage"
+        tools:text="Frumos aici!!" />
+
+    <ImageView
+        android:id="@+id/postCommentsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postImage"
+        app:srcCompat="@drawable/insert_comment_black_24dp" />
+
+    <ImageView
+        android:id="@+id/likeButtonImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postImage"
+        app:srcCompat="@drawable/thumb_up_off_alt_black_24dp" />
+
+    <TextView
+        android:id="@+id/likeNumberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/likeButtonImage"
+        app:layout_constraintEnd_toStartOf="@+id/likeButtonImage"
+        app:layout_constraintTop_toTopOf="@+id/likeButtonImage"
+        tools:text="15" />
+
+    <TextView
+        android:id="@+id/postTimestampText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12:36" />
+</androidx.constraintlayout.widget.ConstraintLayout>

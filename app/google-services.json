@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "318508418730",
+    "project_id": "wasteleaf-web-android-64a33",
+    "storage_bucket": "wasteleaf-web-android-64a33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318508418730:android:6539ccb809a02fbd8532d3",
+        "android_client_info": {
+          "package_name": "com.wasteleaf.wasteleaf_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318508418730-ov1a17gho06ig3sfc85pu6i4085716k5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wasteleaf.wasteleaf_android",
+            "certificate_hash": "c24333bf9f42e4df1142e328e6a6029508b7fa45"
+          }
+        },
+        {
+          "client_id": "318508418730-mc6vtgt1go4qsquemfagt5sj0dldr9j1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW-G_7JaocEqIZI4cQf4m4i-LJNq45ujI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318508418730-mc6vtgt1go4qsquemfagt5sj0dldr9j1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

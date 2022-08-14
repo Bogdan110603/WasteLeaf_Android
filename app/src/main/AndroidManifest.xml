@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wasteleaf.wasteleaf_android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WasteLeaf_Android">
+        <activity
+            android:name=".home.feed.searchuser.SearchUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.feed.peopleyoumayknow.PeopleYouMayKnowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.feed.post.like.LikesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.user.notifications.NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.maps.report.UpdateReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.maps.report.AllCategoriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.maps.report.ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.maps.report.ReportDetailsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDWYCPvQLWhfzPWXRPWZziWugZeKj4t9s4" />
+
+        <activity
+            android:name=".home.maps.MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.messages.chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.messages.contact.ContactsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.user.profile.MakePostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.user.profile.YourOwnProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.feed.post.PostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.user.profile.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.feed.post.comment.CommentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.feed.HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service
+            android:name=".util.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.wasteleaf.wasteleaf_android.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

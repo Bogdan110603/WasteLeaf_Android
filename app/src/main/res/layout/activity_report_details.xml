@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.maps.report.ReportDetailsActivity">
+
+    <TextView
+        android:id="@+id/indexPhotoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2/3" />
+
+    <ImageView
+        android:id="@+id/imageWaste"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reportDetailsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/reportDetailsBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_119__1_" />
+
+        <ImageView
+            android:id="@+id/routeBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/reportDetailsBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/reportDetailsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/timeBackground"
+            app:srcCompat="@drawable/rectangle_126" />
+
+        <ImageView
+            android:id="@+id/timeBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/routeBackground"
+            app:layout_constraintEnd_toEndOf="@+id/reportDetailsBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/reportDetailsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/reporterBackground"
+            app:srcCompat="@drawable/rectangle_121" />
+
+        <ImageView
+            android:id="@+id/reporterBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/timeBackground"
+            app:layout_constraintEnd_toEndOf="@+id/reportDetailsBackground"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/reportDetailsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/categoryImage"
+            app:srcCompat="@drawable/rectangle_121" />
+
+        <ImageView
+            android:id="@+id/closeDetailsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:rotationX="180"
+            app:layout_constraintEnd_toEndOf="@+id/reportDetailsBackground"
+            app:layout_constraintStart_toStartOf="@+id/reportDetailsBackground"
+            app:layout_constraintTop_toTopOf="@+id/reportDetailsBackground"
+            app:srcCompat="@drawable/group_7" />
+
+        <ImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/reportDetailsBackground"
+            app:layout_constraintStart_toStartOf="@+id/reportDetailsBackground"
+            app:layout_constraintTop_toBottomOf="@+id/closeDetailsLayout"
+            app:srcCompat="@drawable/rectangle_120" />
+
+        <ImageView
+            android:id="@+id/routeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/routeBackground"
+            app:layout_constraintEnd_toEndOf="@+id/routeBackground"
+            app:layout_constraintStart_toStartOf="@+id/routeBackground"
+            app:layout_constraintTop_toTopOf="@+id/routeBackground"
+            app:srcCompat="@drawable/route" />
+
+        <TextView
+            android:id="@+id/timestampText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/timeBackground"
+            app:layout_constraintEnd_toEndOf="@+id/timeBackground"
+            app:layout_constraintStart_toStartOf="@+id/timeBackground"
+            app:layout_constraintTop_toTopOf="@+id/timeBackground"
+            tools:text="10 days ago" />
+
+        <TextView
+            android:id="@+id/reporterNicknameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/reporterBackground"
+            app:layout_constraintEnd_toEndOf="@+id/reporterBackground"
+            app:layout_constraintStart_toStartOf="@+id/reporterBackground"
+            app:layout_constraintTop_toTopOf="@+id/reporterBackground"
+            tools:text="gigel69" />
+
+        <ImageView
+            android:id="@+id/reporterProfilePicture"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reporterNicknameText"
+            app:layout_constraintEnd_toStartOf="@+id/reporterNicknameText"
+            app:layout_constraintTop_toTopOf="@+id/reporterNicknameText"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/smallUpdateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/smallUpdateReportBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rectangle_119"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/openReportLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/group_7"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/smallUpdateReportBackground"
+            app:layout_constraintEnd_toEndOf="@+id/smallUpdateReportBackground"
+            app:layout_constraintStart_toStartOf="@+id/smallUpdateReportBackground"
+            app:layout_constraintTop_toTopOf="@+id/smallUpdateReportBackground"
+            app:srcCompat="@drawable/group_7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wasteleaf__31" />
+
+        <ImageView
+            android:id="@+id/loadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:srcCompat="@drawable/subtraction_6" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_wasteleaf_1" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/loading___" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

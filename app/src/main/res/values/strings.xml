@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WasteLeaf</string>
+    <string name="register">REGISTER</string>
+    <string name="email">Email...</string>
+    <string name="password">Password...</string>
+    <string name="wasteleaf">WASTELEAF</string>
+    <string name="log_in">Log in</string>
+    <string name="or">or</string>
+    <string name="slash">/</string>
+    <string name="report">REPORT</string>
+    <string name="category">Category:</string>
+    <string name="remove_the_image">Remove the image</string>
+    <string name="finish">Finish</string>
+    <string name="make_another_pic">Take a photo</string>
+    <string name="add_an_image">Add an image</string>
+    <string name="all_categories">All categories:</string>
+    <string name="close">Close</string>
+</resources>

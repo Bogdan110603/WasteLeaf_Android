@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".home.maps.MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".home.maps.MapsActivity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wasteNearbyBigLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/wasteNearbyBigBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_1__3_" />
+
+        <ImageView
+            android:id="@+id/closeWasteNearbyBigButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/wasteNearbyBigBackground"
+            app:layout_constraintEnd_toEndOf="@id/wasteNearbyBigBackground"
+            app:srcCompat="@drawable/cancel_black_24dp" />
+
+        <ImageView
+            android:id="@+id/detailsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/wasteNearbyBigBackground"
+            app:layout_constraintTop_toBottomOf="@+id/wasteNearbyBigText"
+            app:srcCompat="@drawable/donut_small_black_24dp__1_" />
+
+        <ImageView
+            android:id="@+id/wasteNearbyImage"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="@id/wasteNearbyBigBackground"
+            app:layout_constraintEnd_toStartOf="@+id/detailsIcon"
+            app:layout_constraintStart_toEndOf="@+id/directionsIcon"
+            app:layout_constraintTop_toBottomOf="@+id/wasteNearbyBigText" />
+
+        <ImageView
+            android:id="@+id/showLessNotificationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="@+id/wasteNearbyBigBackground"
+            app:layout_constraintStart_toStartOf="@+id/wasteNearbyBigBackground"
+            app:srcCompat="@drawable/arrow_circle_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/detailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/detailsIcon"
+            app:layout_constraintStart_toStartOf="@+id/detailsIcon"
+            app:layout_constraintTop_toBottomOf="@+id/detailsIcon"
+            app:srcCompat="@drawable/details__1_" />
+
+        <ImageView
+            android:id="@+id/wasteNearbyBigText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/wasteNearbyBigBackground"
+            app:layout_constraintStart_toStartOf="@+id/wasteNearbyBigBackground"
+            app:layout_constraintTop_toTopOf="@id/wasteNearbyBigBackground"
+            app:srcCompat="@drawable/waste_nearby" />
+
+        <ImageView
+            android:id="@+id/directionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/directionsIcon"
+            app:layout_constraintStart_toStartOf="@+id/directionsIcon"
+            app:layout_constraintTop_toBottomOf="@+id/directionsIcon"
+            app:srcCompat="@drawable/directions__1_" />
+
+        <ImageView
+            android:id="@+id/directionsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/wasteNearbyBigBackground"
+            app:layout_constraintTop_toBottomOf="@+id/wasteNearbyBigText"
+            app:srcCompat="@drawable/share_location_black_24dp__1_" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wasteNearbyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/wasteNearbyBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/path_13" />
+
+        <ImageView
+            android:id="@+id/wasteNearbyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/wasteNearbyBackground"
+            app:layout_constraintStart_toStartOf="@id/wasteNearbyBackground"
+            app:layout_constraintTop_toTopOf="@+id/wasteNearbyBackground"
+            app:srcCompat="@drawable/waste_nearby" />
+
+        <ImageView
+            android:id="@+id/closeNotificationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/wasteNearbyBackground"
+            app:layout_constraintEnd_toEndOf="@+id/wasteNearbyBackground"
+            app:srcCompat="@drawable/cancel_black_24dp" />
+
+        <ImageView
+            android:id="@+id/showAllNotificationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/wasteNearbyBackground"
+            app:layout_constraintStart_toStartOf="@+id/wasteNearbyBackground"
+            app:srcCompat="@drawable/arrow_circle_right_black_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/panorama_fish_eye_black_24dp__2_ceva1" />
+
+    <ImageView
+        android:id="@+id/optionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/panorama_fish_eye_black_24dp__1_ceva1" />
+
+    <Button
+        android:id="@+id/reportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:backgroundTint="@color/light_green"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/screenButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableRow
+        android:id="@+id/categoriesRow"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/reportButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/organicShortcut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/organic_white_bg" />
+
+        <ImageButton
+            android:id="@+id/glassShortcut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/glass_white_bg" />
+
+        <ImageButton
+            android:id="@+id/paperShortcut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/paper_white_bg" />
+
+        <ImageButton
+            android:id="@+id/plasticShortcut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/plastic_white_bg" />
+
+    </TableRow>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wasteleaf__31" />
+
+        <ImageView
+            android:id="@+id/loadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:srcCompat="@drawable/subtraction_6" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_wasteleaf_1" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/loading___" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

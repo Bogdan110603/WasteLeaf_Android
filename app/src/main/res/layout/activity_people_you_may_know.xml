@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.feed.peopleyoumayknow.PeopleYouMayKnowActivity">
+
+    <ImageView
+        android:id="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rectangle_16" />
+
+    <ImageView
+        android:id="@+id/chatButtonPeopleYouMayKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:layout_constraintStart_toStartOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:layout_constraintTop_toTopOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:srcCompat="@drawable/send_black_24dp" />
+
+    <ImageView
+        android:id="@+id/mapButtonPeopleYouMayKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:layout_constraintEnd_toStartOf="@+id/profileButtonPeopleYouMayKnow"
+        app:layout_constraintStart_toEndOf="@+id/chatButtonPeopleYouMayKnow"
+        app:layout_constraintTop_toTopOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:srcCompat="@drawable/travel_explore_black_24dp_mic" />
+
+    <ImageView
+        android:id="@+id/profileButtonPeopleYouMayKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:layout_constraintEnd_toEndOf="@id/backgroundNavigationBarPeopleYouMayKnow"
+        app:layout_constraintTop_toTopOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:srcCompat="@drawable/face_black_24dp_mic" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/people_you_may_know___" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/peopleYouMayKnowRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundNavigationBarPeopleYouMayKnow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="196dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wasteleaf__31" />
+
+        <ImageView
+            android:id="@+id/loadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/imageView22"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            app:srcCompat="@drawable/subtraction_6" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_wasteleaf_1" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/loading___" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

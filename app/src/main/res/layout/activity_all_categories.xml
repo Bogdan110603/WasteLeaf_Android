@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.maps.report.AllCategoriesActivity">
+
+    <TextView
+        android:id="@+id/allCategoriesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/all_categories"
+        android:textColor="#86D687"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/organicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/plasticButton"
+        app:layout_constraintEnd_toStartOf="@+id/glassButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allCategoriesText"
+        app:srcCompat="@drawable/organic_nou" />
+
+    <ImageView
+        android:id="@+id/glassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textileButton"
+        app:layout_constraintEnd_toStartOf="@+id/paperButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/organicButton"
+        app:layout_constraintTop_toBottomOf="@+id/allCategoriesText"
+        app:srcCompat="@drawable/glass_nou" />
+
+    <ImageView
+        android:id="@+id/paperButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/metalButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/glassButton"
+        app:layout_constraintTop_toBottomOf="@+id/allCategoriesText"
+        app:srcCompat="@drawable/paper_nou" />
+
+    <ImageView
+        android:id="@+id/plasticButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/ewasteButton"
+        app:layout_constraintEnd_toStartOf="@+id/glassButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/organicButton"
+        app:srcCompat="@drawable/plastic_nou" />
+
+    <ImageView
+        android:id="@+id/textileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tireButton"
+        app:layout_constraintEnd_toStartOf="@+id/paperButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/organicButton"
+        app:layout_constraintTop_toBottomOf="@+id/glassButton"
+        app:srcCompat="@drawable/textil_bun_nou" />
+
+    <ImageView
+        android:id="@+id/metalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/dumpsterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/glassButton"
+        app:layout_constraintTop_toBottomOf="@+id/paperButton"
+        app:srcCompat="@drawable/metal_bun_nou" />
+
+    <ImageView
+        android:id="@+id/ewasteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/closeButton"
+        app:layout_constraintEnd_toStartOf="@+id/glassButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plasticButton"
+        app:srcCompat="@drawable/ewaste_bun_nou" />
+
+    <ImageView
+        android:id="@+id/tireButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/closeButton"
+        app:layout_constraintEnd_toStartOf="@+id/paperButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/organicButton"
+        app:layout_constraintTop_toBottomOf="@+id/textileButton"
+        app:srcCompat="@drawable/cauciuc_bun_nou" />
+
+    <ImageView
+        android:id="@+id/dumpsterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/closeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/glassButton"
+        app:layout_constraintTop_toBottomOf="@+id/metalButton"
+        app:srcCompat="@drawable/tomberon_bun_nou" />
+
+    <TextView
+        android:id="@+id/organicText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organic"
+        app:layout_constraintEnd_toEndOf="@+id/organicButton"
+        app:layout_constraintStart_toStartOf="@+id/organicButton"
+        app:layout_constraintTop_toBottomOf="@+id/organicButton" />
+
+    <TextView
+        android:id="@+id/glassText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glass"
+        app:layout_constraintEnd_toEndOf="@+id/glassButton"
+        app:layout_constraintStart_toStartOf="@+id/glassButton"
+        app:layout_constraintTop_toBottomOf="@+id/glassButton" />
+
+    <TextView
+        android:id="@+id/paperText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/paperButton"
+        app:layout_constraintTop_toBottomOf="@+id/paperButton" />
+
+    <TextView
+        android:id="@+id/plasticText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plastic"
+        app:layout_constraintEnd_toEndOf="@+id/plasticButton"
+        app:layout_constraintStart_toStartOf="@+id/plasticButton"
+        app:layout_constraintTop_toBottomOf="@+id/plasticButton" />
+
+    <TextView
+        android:id="@+id/textileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Textile"
+        app:layout_constraintEnd_toEndOf="@+id/textileButton"
+        app:layout_constraintStart_toStartOf="@+id/textileButton"
+        app:layout_constraintTop_toBottomOf="@+id/textileButton" />
+
+    <TextView
+        android:id="@+id/metalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Metal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/metalButton"
+        app:layout_constraintTop_toBottomOf="@+id/metalButton" />
+
+    <TextView
+        android:id="@+id/ewasteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-waste"
+        app:layout_constraintEnd_toEndOf="@+id/ewasteButton"
+        app:layout_constraintStart_toStartOf="@+id/ewasteButton"
+        app:layout_constraintTop_toBottomOf="@+id/ewasteButton" />
+
+    <TextView
+        android:id="@+id/tireText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tire"
+        app:layout_constraintEnd_toEndOf="@+id/tireButton"
+        app:layout_constraintStart_toStartOf="@+id/tireButton"
+        app:layout_constraintTop_toBottomOf="@+id/tireButton" />
+
+    <TextView
+        android:id="@+id/dumpsterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dumpster"
+        app:layout_constraintEnd_toEndOf="@+id/dumpsterButton"
+        app:layout_constraintStart_toStartOf="@+id/dumpsterButton"
+        app:layout_constraintTop_toBottomOf="@+id/dumpsterButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
